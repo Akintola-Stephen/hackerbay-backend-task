@@ -15,12 +15,12 @@ To get up and running:
 
 **1.** Clone the repo.
 ```
-git clone https://github.com/Akintola-stephen/stateless-microservice-hackerbay.git
+git clone https://github.com/Akintola-stephen/hackerbay-backend-task.git
 ```
 
 **2.**  ```cd``` into repo.
 ```
-cd stateless-microservice-hackerbay
+cd hackerbay-backend-task
 ```
 
 **3.**  Install dependencies
@@ -44,10 +44,10 @@ This is a mock authentication so you can pass in any username or password to log
  3.  Setting 2 keys ( one for username and password). You can set  the ```username``` key to any name.  And the ```password``` to any password (minimum of 6 characters).
  4. Hit ```Send```. Your result should be in this format:
  ```
- {
-    "user": "Stephen",
+{
+    "user": "stephen23",
     "authorized": true,
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vaSIsImlhdCI6MTUzMjAwNDkwMSwiZXhwIjoxNTMyMDI2NTAxfQ.sonItbpZ_yKsRLDXNfDqwN6yN5VbdMVDhgKAMxDmPFY"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN0ZXBoZW4yMyIsImlhdCI6MTYzNDI2NDgyOCwiZXhwIjoxNjM0Mjg2NDI4fQ.PxnJteKsgCBkc1o8YmO48Qctmgu0I-xVWdHitUpsFzg"
 }
  ```
 
@@ -59,7 +59,7 @@ Apply json patch to a json object, and return the resulting json object.
  ```
  Examples:
  jsonObject
- { "user": { "firstName": "Albert", "lastName": "Einstein" } }
+ { "user": { "firstName": "Akintola", "lastName": "Stephen" } }
 
  jsonPatchObject
  [{"op": "replace", "path": "/user/firstName", "value": "Akintola"}, {"op": "replace", "path": "/user/lastName", "value": "Stephen"}]
@@ -67,7 +67,7 @@ Apply json patch to a json object, and return the resulting json object.
  3. Since this is a secure route, for testing, you will have to set the token in the ```Header```. Set key as ```token``` and value as token you received from **Authentication**.
  4. Expected result should be:
  ```
- { "user": { "firstName": "Akintola", "lastName": "Akintola04" } }
+ { "user": { "firstName": "Akintola", "lastName": "Stephen" } }
  ```
 
 
@@ -108,5 +108,5 @@ All logs are saved in ```hackerbay.log``` in the application's root.
 ## Known Issues
 
  1. Test for thumbnail generation with [Mocha](https://mochajs.org/) _'it should accept a public image url and return a resized image'_ returns a promise which is currently not being handled properly.
- 2. _Dockerfile_ has  been fully tested.
- 3. _Istanbul_ coverage not working as expected.
+ 2. _Dockerfile_ has been fully tested.
+ 3. _Istanbul_ coverage working as expected.
