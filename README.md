@@ -108,5 +108,5 @@ All logs are saved in ```hackerbay.log``` in the application's root.
 ## Known Issues
 
  1. Test for thumbnail generation with [Mocha](https://mochajs.org/) _'it should accept a public image url and return a resized image'_ returns a promise which is currently not being handled properly.
- 2. _Dockerfile_ has been fully tested.
+ 2. _Dockerfile_ has been fully tested. run the command **docker pull panumy/hackerbay_test:hackerbay_test**
  3. _Istanbul_ coverage working as expected.
